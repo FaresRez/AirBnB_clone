@@ -11,8 +11,9 @@ class BaseModel:
     
 
 
-b= BaseModel()
-print(b.id)
 
-c= BaseModel()
-print(c.id)
+# b= BaseModel()
+# print(b.id)
+
+# c= BaseModel()
+# print(c.id)
