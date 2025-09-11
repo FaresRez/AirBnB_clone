@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+from models import storage
+
 
 class BaseModel:
-    
+
     def __init__(self, *args, **kwargs):
         if kwargs:
             self.id = kwargs.get("id")
@@ -15,15 +17,16 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            # models.storage.new(self)
-    
+            storage.new(self)
+
     def __str__(self):
         """The representation of the object"""
-        return "[{}] ({}) {}".format(self.__class__.__name__,self.id, self.__dict__)
+        return f'[{self.__class__.__name__}] ({self.id}) {self.__dict__}'
 
     def save(self):
         """Update the object"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """Return a dictionary representation of the object"""
@@ -31,6 +34,4 @@ class BaseModel:
         new_dict["__class__"] = self.__class__.__name__
         new_dict["created_at"] = self.created_at.isoformat()
         new_dict["updated_at"] = self.updated_at.isoformat()
-    
-
-        return  new_dict
+        return new_dict
