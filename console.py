@@ -27,6 +27,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def default(self, line):
+        """Called on an input line"""
         print("unknown command")
 
     def emptyline(self):
