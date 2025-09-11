@@ -5,6 +5,7 @@ import sys
 # Ensure project root is on sys.path so `from models...` works when running this file directly
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+#!/usr/bin/python3
 from models import storage
 from models.base_model import BaseModel
 
@@ -13,3 +14,11 @@ print("-- Reloaded objects --")
 for obj_id in all_objs.keys():
     obj = all_objs[obj_id]
     print(obj)
+
+print("-- Create a new object --")
+my_model = BaseModel()
+my_model.name = "My_First_Model"
+my_model.my_number = 89
+my_model.save()
+print(my_model)
+
