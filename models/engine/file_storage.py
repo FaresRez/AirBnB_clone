@@ -2,7 +2,7 @@
 
 import json
 import os
-from models.base_model import BaseModel
+
 
 class FileStorage:
     """serializes inst to a JSON file and deser JSON file to inst"""
@@ -26,6 +26,7 @@ class FileStorage:
         """deserializes the JSON file to __objects (only if the JSON file
         (__file_path) exists; otherwise, do nothing.
         If the file doesn't exist, no exception should be raised)"""
+        from models.base_model import BaseModel
         Class_map = {"BaseModel": BaseModel}
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as f:
