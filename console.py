@@ -9,20 +9,6 @@ class HBNBCommand(cmd.Cmd):
     def __init__(self):
         super().__init__()
 
-    def do_test(self, line):
-        """this is a test"""
-        print(f"welcome to my cmd {line}")
-
-    def do_create(self, line):
-        """Creates a new instance and save it to new instance"""
-        if line == "":
-            print("** class name missing **")
-        elif False:
-            print("** class doesn't exist **")
-
-    def do_show(self, line):
-        """Shows all instances of a class"""
-
     def do_quit(self, line):
         """Quit command to exit the program"""
         return True
