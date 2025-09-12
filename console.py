@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module defines the command-line interp.
+"""
 import cmd
 
 
@@ -7,6 +10,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbtn) "
 
     def __init__(self):
+        """Initialize the command interpreter"""
         super().__init__()
 
     def do_quit(self, line):
