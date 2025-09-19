@@ -27,7 +27,8 @@ class FileStorage:
         (__file_path) exists; otherwise, do nothing.
         If the file doesn't exist, no exception should be raised)"""
         from models.base_model import BaseModel
-        Class_map = {"BaseModel": BaseModel}
+        from models.user import User
+        Class_map = {"BaseModel": BaseModel, "User": User}
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as f:
                 if os.path.getsize(self.__file_path) > 0:

@@ -4,12 +4,13 @@ This module defines the command-line interp.
 """
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """Contains the functionality for the HBNB console"""
     prompt = "(hbtn) "
-    classes_names = {"BaseModel": BaseModel}
+    classes_names = {"BaseModel": BaseModel, "User": User}
 
     def verify_class(self, input):
         """Verify if the class name exists"""
