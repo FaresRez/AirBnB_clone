@@ -37,3 +37,4 @@ class FileStorage:
                         class_name = object_dict['__class__']
                         if class_name in Class_map:
                             self.__objects[key] = Class_map[class_name](**object_dict)
+        print("File reloaded successfully")
