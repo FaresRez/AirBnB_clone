@@ -28,7 +28,14 @@ class FileStorage:
         If the file doesn't exist, no exception should be raised)"""
         from models.base_model import BaseModel
         from models.user import User
-        Class_map = {"BaseModel": BaseModel, "User": User}
+        from models.place import Place
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.review import Review
+        Class_map = {"BaseModel": BaseModel, "User": User, "Place": Place,
+                     "State": State, "City": City, "Amenity": Amenity,
+                     "Review": Review}
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as f:
                 if os.path.getsize(self.__file_path) > 0:

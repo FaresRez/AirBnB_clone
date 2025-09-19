@@ -5,12 +5,19 @@ This module defines the command-line interp.
 import cmd
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """Contains the functionality for the HBNB console"""
     prompt = "(hbtn) "
-    classes_names = {"BaseModel": BaseModel, "User": User}
+    classes_names = {"BaseModel": BaseModel, "User": User, "Place": Place,
+                     "State": State, "City": City, "Amenity": Amenity,
+                     "Review": Review}
 
     def verify_class(self, input):
         """Verify if the class name exists"""
@@ -35,8 +42,20 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
-    def default(self, line):
+    def default(self, line: str):
         """Called on an input line"""
+        if '.' in line and line.endswith('.all()'):
+            check = line.split('.')
+            if check[0] in self.classes_names:
+                object_list = []
+                for obj in storage.all().values():
+                    if obj.__class__.__name__ == check[0]:
+                        object_list.append(obj.__str__())
+                print(object_list)
+            else:
+                print("** class doesn't exist **")
+            return
+    
         if line == "EOF":
             return self.do_EOF(line)
         print(f"*** Unknown syntax: {line}")

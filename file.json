@@ -1,32 +1,41 @@
 {
   "BaseModel.2cb238cb-9944-456a-a5f0-d3d1447775f8": {
     "id": "2cb238cb-9944-456a-a5f0-d3d1447775f8",
-    "created_at": "2025-09-19T10:15:28.141510",
-    "updated_at": "2025-09-19T10:15:28.141510",
+    "created_at": "2025-09-19T10:38:28.825882",
+    "updated_at": "2025-09-19T10:38:28.825882",
     "name": "Fares",
     "my_number": null,
     "__class__": "BaseModel"
   },
   "BaseModel.794bf018-7ce9-478a-9831-327deab9a090": {
     "id": "794bf018-7ce9-478a-9831-327deab9a090",
-    "created_at": "2025-09-19T10:15:28.141510",
-    "updated_at": "2025-09-19T10:15:28.141510",
+    "created_at": "2025-09-19T10:38:28.825882",
+    "updated_at": "2025-09-19T10:38:28.825882",
     "name": null,
     "my_number": null,
     "__class__": "BaseModel"
   },
   "BaseModel.16cb7b7a-f722-4a74-9a08-bef13220f65a": {
     "id": "16cb7b7a-f722-4a74-9a08-bef13220f65a",
-    "created_at": "2025-09-19T10:15:28.141510",
-    "updated_at": "2025-09-19T10:15:28.141510",
+    "created_at": "2025-09-19T10:38:28.825882",
+    "updated_at": "2025-09-19T10:38:28.825882",
     "name": null,
     "my_number": null,
     "__class__": "BaseModel"
   },
   "User.0c2040e0-7ead-44f2-a849-8ad5366dd669": {
     "id": "0c2040e0-7ead-44f2-a849-8ad5366dd669",
-    "created_at": "2025-09-19T10:15:34.652056",
-    "updated_at": "2025-09-19T10:15:34.652056",
+    "created_at": "2025-09-19T10:38:28.825882",
+    "updated_at": "2025-09-19T10:38:28.825882",
+    "name": null,
+    "my_number": null,
     "__class__": "User"
+  },
+  "City.3ab7ea8a-eb79-45e2-9a5a-4fc17633dfe8": {
+    "id": "3ab7ea8a-eb79-45e2-9a5a-4fc17633dfe8",
+    "created_at": "2025-09-19T10:38:38.167938",
+    "updated_at": "2025-09-19T10:38:38.167938",
+    "name": "NYC",
+    "__class__": "City"
   }
 }
